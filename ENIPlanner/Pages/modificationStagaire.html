@@ -6,47 +6,35 @@
 
     <title>ENI - ENIPlanner</title>
 
-    <!-- Bootstrap CSS -->    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-    <!-- bootstrap theme -->
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link href="css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />   
-    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-    <!-- Custom styles -->
-	  <link rel="stylesheet" href="css/fullcalendar.css">
-	  <link href="css/widgets.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
-	  <link href="css/xcharts.min.css" rel=" stylesheet">	
-	  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
-    <link href="css/bootstrap-year-calendar.css" rel="stylesheet"/>
-    <link href="css/bootstrap-year-calendar.min.css" rel="stylesheet" />   
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="../css/elegant-icons-style.css" rel="stylesheet" /> 
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="../css/style-responsive.css" rel="stylesheet" />
+    <link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-year-calendar.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-year-calendar.min.css" rel="stylesheet" />  
+
   </head>
 
   <body>
-  <!-- container section start -->
   <section id="container" class="">
-    
-      <header class="header dark-bg">
 
+<!-- DEBUT ENTETE-->   
+      <!-- LOGO EN HAUT A GAUCHE-->
+      <header class="header dark-bg">
             <div class="toggle-nav">
-              <img src="img/eni.png" width="50" height="50">
+              <img src="../img/eni.png" width="50" height="50">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
                 <div ></br></div>
             </div>
-
-            <!--logo start-->
+            <!-- TITRE-->
             <a href="index.html" class="logo">ENI <span class="lite">Planner</span></a>
-            <!--logo end-->
+            <!-- DEBUT NOTIFICATION EN HAUT A DROITE  -->
             <div class="top-nav notification-row">                
-                <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
-                    
                     <li id="alert_notificatoin_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-
                             <i class="icon-bell-l"></i>
                             <span class="badge bg-important">7</span>
                         </a>
@@ -88,8 +76,7 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- alert notification end-->
-                    <!-- user login dropdown start-->
+                    <!-- DEBUT NOTIFICATION UTILISATEUR  -->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="username">Stéphane OLLIVIER</span>
@@ -105,14 +92,13 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- user login dropdown end -->
+                     <!-- FIN NOTIFICATION UTILISATEUR  -->
                 </ul>
-                <!-- notificatoin dropdown end-->
             </div>
       </header>      
-      <!--header end-->
+<!-- FIN ENTETE-->  
 
-      <!--sidebar start-->
+<!-- DEBUT BARE DE NAVIGATION A GAUCHE-->  
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
@@ -120,7 +106,7 @@
                   <li class="active">
                       <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
-                          <span>Acceuil</span>
+                          <span>Accueil</span>
                       </a>
                   </li>
      
@@ -134,67 +120,33 @@
                           <li><a class="" href="general.html">Création</a></li>
                           <li><a class="" href="buttons.html">Modification</a></li>
                           <li><a class="" href="grids.html">Consultation</a></li>
+                          <li><a class="" href="grids.html">Modèle</a></li>
                       </ul>
                   </li>
-                  <li>
-                      <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Modèle</span>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Paramétrage</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
+                      <ul class="sub">
+                          <li><a class="" href="general.html">Purges</a></li>
+                          <li><a class="" href="buttons.html">Recupération données</a></li>
+                          <li><a class="" href="grids.html">Historisation</a></li>
+                      </ul>
                   </li>     
               </ul>
-              <!-- sidebar menu end-->
           </div>
       </aside>
-      <!--sidebar end-->
+<!-- FIN BARE DE NAVIGATION A GAUCHE-->  
       
-      <!--main content start-->
+
+
+      
+<!--////////  DEBUT PAGE  //////-->
       <section id="main-content">
           <section class="wrapper">            
-              <!--overview start-->
-              
-            <div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box blue-bg">
-						<i class="fa fa-user"></i>
-						<div class="count">1000</div>
-						<div class="title">Stagaires</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg">
-                        <i class="fa fa-user"></i>
-                        <div class="count">50</div>
-                        <div class="title">Nouveau stagiaire</div>                       
-                    </div><!--/.info-box-->         
-                </div><!--/.col-->
-
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg">
-                        <i class="glyphicon glyphicon-th-list"></i>
-                        <div class="count">50</div>
-                        <div class="title">Modules</div>                       
-                    </div><!--/.info-box-->         
-                </div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg">
-                        <i class="fa fa-cloud-download"></i>
-                        <div class="count">50</div>
-                        <div class="title">Salles</div>                       
-                    </div><!--/.info-box-->         
-                </div><!--/.col-->
-				
-			           </div><!--/.row-->
-
-                </div>
-              </div>
-              
-            </div>
-                        
-          </div> 
-<div ></br></div>
+              <div ></br></div>
 
 <!--//////////
 MENU
@@ -208,17 +160,35 @@ MENU
                 </div>
             </div>
 <div ></br></div>
+<div class="bs-example">
+    <form class="form-inline" role="form">
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <label class="sr-only" for="inputNom">Nom</label>
+                <input type="text" class="form-control" id="inputNom" placeholder="FOLL">
+        </div>
 
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <label class="sr-only" for="inputPrenom">Prenom</label>
+                <input type="text" class="form-control" id="inputPrenom" placeholder="MATTHIEU">
+         </div>
+
+         <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <label class="sr-only" for="inputStatut">Nombre d'heure en formation</label>
+                <input type="text" class="form-control" id="inputStatut" placeholder="50">
+        </div>
+
+    </form>
+<div ></br></br></br></div>
 <!--//////
 CALENDAR
 ///////-->
-<div class="col-md-6 col-xs-12">
+<div class="col-md-9">
     <div data-provide="calendar"></div>
 </div>
 <!--/////////
 FORMULAIRE
 ///////////-->
-<div class="col-lg-6">
+<div class="col-lg-3">
                       <section class="panel">
                           <header class="panel-heading">
                               Recherche de module
@@ -227,21 +197,21 @@ FORMULAIRE
                           <div class="panel-body">
                               <form class="form-horizontal" role="form">
                                   <div class="form-group">
-                                      <label for="inputLibelle" class="col-lg-2 control-label">Libelle</label>
-                                      <div class="col-lg-10">
-                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="Libelle du module">
+                                      <label for="inputLibelle" class="col-sm-3 control-label">Libelle</label>
+                                      <div class="col-md-6">
+                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="Libelle">
                                       </div>
                                   </div>
                                   <!--///// Duree en heure //////-->
                                   <div class="form-group">
-                                      <label for="inputPassword1" class="col-lg-2 control-label">Duree En Heures</label>
-                                      <div class="col-lg-10">
+                                      <label for="inputPassword1" class="col-sm-3 control-label">Duree En Heures</label>
+                                      <div class="col-md-6">
                                           <input type="dureeH" class="form-control" id="inputDureeH" placeholder="Duree En Heures">
                                       </div>
                                   </div>
                                   <div class="form-group">
-                                      <label for="inputPassword1" class="col-lg-2 control-label">Duree En semaine</label>
-                                      <div class="col-lg-10">
+                                      <label for="inputPassword1" class="col-sm-3 control-label">Duree En semaine</label>
+                                      <div class="col-md-6">
                                           <input type="dureeH" class="form-control" id="inputDureeH" placeholder="Duree En semaine">
                                       </div>
                                   </div>
@@ -251,16 +221,12 @@ FORMULAIRE
                                  <th>Libelle</th>
                                  <th>Duree Heures</th>
                                  <th>Duree Semaines</th>
-                                 <th>Detail</th>
-                                 <th>TypeModule</th>
                                  <th>Action</th>
                               </tr>
                               <tr>
                                  <td>JEE</td>
                                  <td>60</td>
                                  <td>3</td>
-                                 <td>JEE BALALALALALALAA</td>
-                                 <td>1</td>
                                  <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
@@ -272,8 +238,6 @@ FORMULAIRE
                                  <td>JEE Avancé</td>
                                  <td>70</td>
                                  <td>3</td>
-                                 <td>EE Avancé bababababababab</td>
-                                 <td>1</td>
                                  <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
@@ -292,24 +256,25 @@ DEBUT TEST
                           <header class="panel-heading">
                               Liste des modules du stagiaire
                           </header>
+                          <div ></br></div>
                           <!--///// LIBELLE DU MODULE //////-->
                     
                           <table class="table table-striped table-advance table-hover">
                            <tbody>
                               <tr>
                                  <th>Libelle</th>
+                                 <th>Date de Début</th>
+                                 <th>Date de Fin</th>
                                  <th>Duree Heures</th>
                                  <th>Duree Semaines</th>
-                                 <th>Detail</th>
-                                 <th>TypeModule</th>
                                  <th>Action</th>
                               </tr>
                               <tr>
                                  <td>JEE</td>
-                                 <td>60</td>
-                                 <td>3</td>
-                                 <td>JEE BALALALALALALAA</td>
-                                 <td>1</td>
+                                 <td>20/01/2016</td>
+                                 <td>01/02/2016</td>
+                                 <td>70</td>
+                                 <td>2</td>
                                  <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
@@ -319,10 +284,10 @@ DEBUT TEST
                               </tr>
                               <tr>
                                  <td>JEE Avancé</td>
+                                 <td>04/02/2016</td>
+                                 <td>20/02/2016</td>
                                  <td>70</td>
-                                 <td>3</td>
-                                 <td>EE Avancé bababababababab</td>
-                                 <td>1</td>
+                                 <td>2</td>
                                  <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
@@ -343,40 +308,16 @@ FIN TEST
   </section>
   <!-- container section start -->
 
-    <!-- javascripts -->
-    <script src="js/jquery.js"></script>
-	<script src="js/jquery-ui-1.10.4.min.js"></script>
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- nice scroll -->
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-    <!-- charts scripts -->
-    <script src="assets/jquery-knob/js/jquery.knob.js"></script>
-    <script src="js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-    <script src="js/owl.carousel.js" ></script>
-    <script src="js/jquery.customSelect.min.js" ></script>
-	  <script src="assets/chart-master/Chart.js"></script>
-   
-    <!--custome script for all page-->
-    <script src="js/scripts.js"></script>
-    <!-- custom script for this page-->
-    <script src="js/sparkline-chart.js"></script>
-    <script src="js/easy-pie-chart.js"></script>
-	  <script src="js/xcharts.min.js"></script>
-	  <script src="js/jquery.autosize.min.js"></script>
-	  <script src="js/jquery.placeholder.min.js"></script>
-	  <script src="js/gdp-data.js"></script>	
-	  <script src="js/morris.min.js"></script>
-	  <script src="js/sparklines.js"></script>	
-	  <script src="js/charts.js"></script>
-	  <script src="js/jquery.slimscroll.min.js"></script>
-    <script src="js/bootstrap-year-calendar.js"></script>
-    <script src="js/bootstrap-year-calendar.min.js"></script>
 
+ <!--/////////////  JS /////////////-->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script><!--/////////////NE PAS SUPPRIMER IMPORTANT POUR LE MENU/////////////-->
+    <script src="../js/jquery.customSelect.min.js" ></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/bootstrap-year-calendar.js"></script>
+    <script src="../js/bootstrap-year-calendar.min.js"></script>
 
 
 <script type="text/javascript">
