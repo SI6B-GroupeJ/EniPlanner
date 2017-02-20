@@ -6,45 +6,36 @@
 
     <title>ENI - ENIPlanner</title>
 
-    <!-- Bootstrap CSS -->    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link href="css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />   
-    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-	  <link rel="stylesheet" href="css/fullcalendar.css">
-	  <link href="css/widgets.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
-	  <link href="css/xcharts.min.css" rel=" stylesheet">	
-	  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
-    <link href="css/creationPlanning.css " rel="stylesheet" />  
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="../css/elegant-icons-style.css" rel="stylesheet" /> 
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="../css/style-responsive.css" rel="stylesheet" />
+    <link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet"/>
+    <link href="../css/creationPlanning.css " rel="stylesheet" />
+    <link href="../css/bootstrap-year-calendar.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-year-calendar.min.css" rel="stylesheet" />  
 
   </head>
 
   <body>
-  <!-- container section start -->
   <section id="container" class="">
-    
-      <header class="header dark-bg">
 
+<!-- DEBUT ENTETE-->   
+      <!-- LOGO EN HAUT A GAUCHE-->
+      <header class="header dark-bg">
             <div class="toggle-nav">
-              <img src="img/eni.png" width="50" height="50">
+              <img src="../img/eni.png" width="50" height="50">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
                 <div ></br></div>
             </div>
-
-            <!--logo start-->
+            <!-- TITRE-->
             <a href="index.html" class="logo">ENI <span class="lite">Planner</span></a>
-            <!--logo end-->
+            <!-- DEBUT NOTIFICATION EN HAUT A DROITE  -->
             <div class="top-nav notification-row">                
-                <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
-                    
                     <li id="alert_notificatoin_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-
                             <i class="icon-bell-l"></i>
                             <span class="badge bg-important">7</span>
                         </a>
@@ -86,8 +77,7 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- alert notification end-->
-                    <!-- user login dropdown start-->
+                    <!-- DEBUT NOTIFICATION UTILISATEUR  -->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="username">Stéphane OLLIVIER</span>
@@ -103,14 +93,13 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- user login dropdown end -->
+                     <!-- FIN NOTIFICATION UTILISATEUR  -->
                 </ul>
-                <!-- notificatoin dropdown end-->
             </div>
       </header>      
-      <!--header end-->
+<!-- FIN ENTETE-->  
 
-      <!--sidebar start-->
+<!-- DEBUT BARE DE NAVIGATION A GAUCHE-->  
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
@@ -118,7 +107,7 @@
                   <li class="active">
                       <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
-                          <span>Acceuil</span>
+                          <span>Accueil</span>
                       </a>
                   </li>
      
@@ -132,76 +121,34 @@
                           <li><a class="" href="general.html">Création</a></li>
                           <li><a class="" href="buttons.html">Modification</a></li>
                           <li><a class="" href="grids.html">Consultation</a></li>
+                          <li><a class="" href="grids.html">Modèle</a></li>
                       </ul>
                   </li>
-                  <li>
-                      <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Modèle</span>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Paramétrage</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
+                      <ul class="sub">
+                          <li><a class="" href="general.html">Purges</a></li>
+                          <li><a class="" href="buttons.html">Recupération données</a></li>
+                          <li><a class="" href="grids.html">Historisation</a></li>
+                      </ul>
                   </li>     
               </ul>
-              <!-- sidebar menu end-->
           </div>
       </aside>
-      <!--sidebar end-->
+<!-- FIN BARE DE NAVIGATION A GAUCHE-->  
       
-      <!--main content start-->
+<!--//////////  MENU   //////////-->
       <section id="main-content">
           <section class="wrapper">            
-              <!--overview start-->
-              
-            <div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box blue-bg">
-						<i class="fa fa-user"></i>
-						<div class="count">1000</div>
-						<div class="title">Stagaires</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg">
-                        <i class="fa fa-user"></i>
-                        <div class="count">50</div>
-                        <div class="title">Nouveau stagiaire</div>                       
-                    </div><!--/.info-box-->         
-                </div><!--/.col-->
-
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg">
-                        <i class="glyphicon glyphicon-th-list"></i>
-                        <div class="count">50</div>
-                        <div class="title">Modules</div>                       
-                    </div><!--/.info-box-->         
-                </div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="info-box blue-bg">
-                        <i class="fa fa-cloud-download"></i>
-                        <div class="count">50</div>
-                        <div class="title">Salles</div>                       
-                    </div><!--/.info-box-->         
-                </div><!--/.col-->
-				
-			</div><!--/.row-->
-
-                </div>
-              </div>
-              
-            </div>
-                        
-          </div> 
-<div ></br></div>
-
-<!--//////////
-MENU
-//////////
--->
+                <div ></br></div>
 <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><i class="fa fa-laptop"></i>Modification d'un planning pour un stagiaire</li>                          
+                        <li><i class="fa fa-laptop"></i>Création d'un planning pour un stagiaire</li>                          
                     </ol>
                 </div>
             </div>
@@ -254,8 +201,33 @@ MENU
             </div>
         </div>
     </div>
-    <div class="row setup-content" id="step-2">
-        <div class="col-xs-12">
+
+
+
+
+    <!--//////// STEP 2 ////////-->
+    <!--<div class="row setup-content" id="step-2">-->
+        <!--<div class="col-xs-12">-->
+            <div class="row setup-content" id="step-2">
+                
+            <!--//////
+CALENDAR
+///////-->
+<section class="panel">
+<div class="col-md-12">
+    <div data-provide="calendar"></div>
+</div>
+<div ></br></br></br></div>
+</section>
+<!--////////
+DEBUT TEST
+/////////-->
+                     
+<!--////////                         
+FIN TEST
+/////////-->
+
+        <!--<div class="col-xs-12">
             <div class="col-md-12">
                 <h3> Step 2</h3>
                 <div class="form-group">
@@ -268,8 +240,11 @@ MENU
                 </div>
                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
             </div>
-        </div>
-    </div>
+        </div>-->
+ 
+
+
+    <!--//////// STEP 3 //////////-->
     <div class="row setup-content" id="step-3">
         <div class="col-xs-12">
             <div class="col-md-12">
@@ -281,46 +256,18 @@ MENU
 </form>
 </div>
 
-
+</div> 
 <!--/////////// FIN PAGE //////////-->
 
-  <!-- container section start -->
-
-    <!-- javascripts -->
-    <script src="js/jquery.js"></script>
-	<script src="js/jquery-ui-1.10.4.min.js"></script>
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- nice scroll -->
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-    <!-- charts scripts -->
-    <script src="assets/jquery-knob/js/jquery.knob.js"></script>
-    <script src="js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-    <script src="js/owl.carousel.js" ></script>
-
-    <!-- custom select -->
-    <script src="js/jquery.customSelect.min.js" ></script>
-	<script src="assets/chart-master/Chart.js"></script>
-   
-    <!--custome script for all page-->
-    <script src="js/scripts.js"></script>
-    <!-- custom script for this page-->
-    <script src="js/sparkline-chart.js"></script>
-    <script src="js/easy-pie-chart.js"></script>
-	<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
-	<script src="js/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="js/xcharts.min.js"></script>
-	<script src="js/jquery.autosize.min.js"></script>
-	<script src="js/jquery.placeholder.min.js"></script>
-	<script src="js/gdp-data.js"></script>	
-	<script src="js/morris.min.js"></script>
-	<script src="js/sparklines.js"></script>	
-	<script src="js/charts.js"></script>
-	<script src="js/jquery.slimscroll.min.js"></script>
+  <!--/////////////  JS /////////////-->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script><!--/////////////NE PAS SUPPRIMER IMPORTANT POUR LE MENU/////////////-->
+    <script src="../js/jquery.customSelect.min.js" ></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/bootstrap-year-calendar.js"></script>
+    <script src="../js/bootstrap-year-calendar.min.js"></script>
 
 
 <script type="text/javascript">
