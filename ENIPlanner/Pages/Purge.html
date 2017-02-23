@@ -161,10 +161,10 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Date de Début</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-						  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy">
-							<input class="form-control" type="text" value="" readonly>
+						  <div class="input-group date" id='form_date'>
+							<input class="form-control" type="text">
 							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-						</div>
+						  </div>
                         </div>
                       </div>
 
@@ -232,18 +232,17 @@
 	
 	<!-- datetimepicker -->
 	<script src="../js/moment.js"></script>
-	<script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
-	<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js"></script>
+	<script src="../js/fr.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript">
-	$('.form_date').datetimepicker({
-        language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0
+	$(function () {
+        $('#form_date').datetimepicker({
+			format: 'DD MMMM YYYY',
+			widgetPositioning: {
+				horizontal: 'right' 
+			},
+			showTodayButton: true
+		});
     });
     </script>
 
