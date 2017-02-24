@@ -119,6 +119,7 @@
                           <li><a class="" href="general.html">Création</a></li>
                           <li><a class="" href="buttons.html">Modification</a></li>
                           <li><a class="" href="grids.html">Consultation</a></li>
+                          <li><a class="" href="grids.html">Comparaison</a></li>
                           <li><a class="" href="grids.html">Modèle</a></li>
                       </ul>
                   </li>
@@ -190,26 +191,37 @@ MENU
                 </div>
             </div>
 <div ></br></div>
-<div ></br></div>
 <div class="bs-example">
-    <form class="form-inline" role="form">
-        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+<form class="form-inline" role="form">
+        <div class="col-xs-6 col-sm-3">
                 <label class="sr-only" for="inputNom">Nom</label>
                 <input type="text" class="form-control" id="inputNom" placeholder="Nom">
         </div>
 
-        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+        <div class="col-xs-6 col-sm-3">
                 <label class="sr-only" for="inputPrenom">Prenom</label>
                 <input type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
          </div>
 
-         <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
-                <label class="sr-only" for="inputStatut">Statut</label>
-                <input type="text" class="form-control" id="inputStatut" placeholder="Statut">
+          <div class="col-xs-6 col-sm-3">
+                          <select class="form-control" id="exampleSelect1">
+                            <option>DL</option>
+                            <option>TSRI</option>
+                            <option>T2SI</option>
+                            <option>CDI</option>
+                            <option>ASR</option>
+                            <option>MS2I-SI</option>
+                            <option>MS2I-INF</option>
+                          </select>
+                        </div>
+         <div class="col-xs-6 col-sm-3">
+                <button type="submit" class="btn btn-success">Rechercher</button> 
+                <div><br><br></div>
         </div>
 
     </form>
-<div ></br></br></br></div>
+  </div>
+
 
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
@@ -217,6 +229,7 @@ MENU
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Entreprise</th>
+                <th>Fromation</th>
                 <th>Date Début</th>
                 <th>Date Fin</th>
                 <th>Statut</th>
@@ -227,6 +240,7 @@ MENU
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Entreprise</th>
+                <th>Fromation</th>
                 <th>Date Début</th>
                 <th>Date Fin</th>
                 <th>Statut</th>
@@ -237,6 +251,7 @@ MENU
                 <td>Tiger</td>
                 <td>Nixon</td>
                 <td>Google</td>
+                <td>CDI</td>
                 <td>14/01/2017</td>
                 <td>14/01/2019</td>
                 <td>Validé</td>
@@ -245,6 +260,7 @@ MENU
                 <td>Garrett</td>
                 <td>Winters</td>
                 <td>Atos</td>
+                <td>ASR</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>En Attente</td>
@@ -253,6 +269,7 @@ MENU
                 <td>Garrett</td>
                 <td>spencer</td>
                 <td>Apple</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>A Faire</td>
@@ -261,6 +278,7 @@ MENU
                 <td>Bob</td>
                 <td>Winters</td>
                 <td>Microsoft</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2019</td>
                 <td>En Attente</td>
@@ -269,6 +287,7 @@ MENU
                 <td>Pierre</td>
                 <td>Winters</td>
                 <td>Atos</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>En Attente</td>
@@ -277,6 +296,7 @@ MENU
                 <td>Michel</td>
                 <td>Tulan</td>
                 <td>Google</td>
+                <td>ASR</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>En Attente</td>
@@ -285,6 +305,7 @@ MENU
                 <td>Garry</td>
                 <td>Alphe</td>
                 <td>Capgemini</td>
+                <td>ASR</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>En Attente</td>
@@ -293,6 +314,7 @@ MENU
                 <td>Stéphanie</td>
                 <td>Demond</td>
                 <td>Atos</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>Validé</td>
@@ -301,6 +323,7 @@ MENU
                 <td>Garrett</td>
                 <td>Winters</td>
                 <td>Atos</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>En Attente</td>
@@ -309,6 +332,7 @@ MENU
                 <td>Bary</td>
                 <td>Winters</td>
                 <td>CGI</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>En Attente</td>
@@ -317,6 +341,7 @@ MENU
                 <td>Anastasia</td>
                 <td>Binon</td>
                 <td>Accenture</td>
+                <td>CDI</td>
                 <td>04/01/2017</td>
                 <td>24/01/2020</td>
                 <td>A Faire</td>
