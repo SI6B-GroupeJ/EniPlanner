@@ -147,39 +147,33 @@
                     <ol class="breadcrumb">
                         <li><i class="fa fa-laptop"></i>Afficher module Indépendant</li>                          
                     </ol>
-                <div class="col-xs-6">
-                  <div class="x_content">
-                    <br />
-                    <form class="form-horizontal form-label-left">
-                      <!--//////   NOM   //////////-->
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nom</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" class="form-control" placeholder="">
+                <div class="bs-example">
+<form class="form-inline" role="form">
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <label class="sr-only" for="inputNom">Libelle</label>
+                <input type="text" class="form-control" id="inputNom" placeholder="Libelle">
+        </div>
+
+<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                          <select class="form-control" id="exampleSelect1">
+                            <option>DL</option>
+                            <option>TSRI</option>
+                            <option>T2SI</option>
+                            <option>CDI</option>
+                            <option>ASR</option>
+                            <option>MS2I-SI</option>
+                            <option>MS2I-INF</option>
+                          </select>
                         </div>
                       </div>
-                      <!--//////   Prenom   //////////-->
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Prénom</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" class="form-control" placeholder="">
-                        </div>
-                      </div>
-                      <!--//////   Prenom   //////////-->
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Prénom</label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" class="form-control" placeholder="">
-                        </div>
-                      </div>
-                       <div class="form-group">
-                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          <button type="submit" class="btn btn-success">Rechercher</button> 
-                        </div>
-                        <div></br></br></br></div>
-                      </div>
-                </div> 
-                </div>
+
+         <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                <button type="submit" class="btn btn-success">Rechercher</button> 
+                <div><br><br></div>
+        </div>
+
+    </form>
+  </div>
                 </div>
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
