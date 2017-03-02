@@ -152,16 +152,16 @@
                 <div class="x_panel">
                     <div class="clearfix"></div>
                     <div class="x_title">
-                    <h2>A partir de</h2>
+                    <h2>Jusqu'à</h2>
                   </div>
                   <div class="x_content">
                     <br />
                     <form class="form-horizontal form-label-left">
                       <!--//////   Date de debut   //////////-->
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date de Début</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date de limite</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-						  <div class="input-group date" id='form_date'>
+						  <div class="input-group date" id='form_date_limite'>
 							<input class="form-control" type="text">
 							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 						  </div>
@@ -191,16 +191,22 @@
                     <form class="form-horizontal form-label-left">
                       <!--//////   date fin   //////////-->
                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date de Fin</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date de début</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" class="form-control" placeholder="">
+                          <div class="input-group date" id='form_date_debut'>
+							<input class="form-control" type="text">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						  </div>
                         </div>
                       </div>
                       <!--//////   date fin   //////////-->
                      <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Date de fin</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" class="form-control" placeholder="">
+                          <div class="input-group date" id='form_date_fin'>
+							<input class="form-control" type="text">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						  </div>
                         </div>
                       </div>
 
@@ -236,7 +242,21 @@
 	<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript">
 	$(function () {
-        $('#form_date').datetimepicker({
+        $('#form_date_limite').datetimepicker({
+			format: 'DD MMMM YYYY',
+			widgetPositioning: {
+				horizontal: 'right' 
+			},
+			showTodayButton: true
+		});
+		$('#form_date_debut').datetimepicker({
+			format: 'DD MMMM YYYY',
+			widgetPositioning: {
+				horizontal: 'right' 
+			},
+			showTodayButton: true
+		});
+		$('#form_date_fin').datetimepicker({
 			format: 'DD MMMM YYYY',
 			widgetPositioning: {
 				horizontal: 'right' 
