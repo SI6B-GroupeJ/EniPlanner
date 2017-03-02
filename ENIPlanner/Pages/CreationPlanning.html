@@ -226,7 +226,7 @@
 <!--//////CALENDAR///////-->
 <section class="panel">
 <div class="col-md-12">
-    <div data-provide="calendar"></div>
+    <div id="calendar"></div>
 </div>
 </section>
                       <section class="panel">
@@ -448,6 +448,7 @@
     <script src="../js/scripts.js"></script>
     <script src="../js/bootstrap-year-calendar.js"></script>
     <script src="../js/bootstrap-year-calendar.min.js"></script>
+	<script src="../js/languages/bootstrap-year-calendar.fr.js"></script>
 
 
 <script type="text/javascript">
@@ -493,6 +494,158 @@
     });
 
     $('div.setup-panel div a.btn-primary').trigger('click');
+	
+	
+	function hidePopover(elt) {
+	// Hiding the popover only if the mouse is not on the day AND not on the popover.
+	if(!elt.data('mouse-on-day') && !elt.data('mouse-on-popover')) {
+		elt.popover('hide');
+	}
+	}
+	
+	var currentYear = new Date().getFullYear();
+	
+	$('#calendar').calendar({ 
+		language: 'fr',
+		enableContextMenu: true,
+		enableRangeSelection: true,
+		mouseOnDay: function(e) {
+			if(e.events.length > 0) {
+				$(e.element).data('mouse-on-day', true);
+			
+				var content = '';
+				
+				for(var i in e.events) {
+					content += '<div class="event-tooltip-content">'
+									+ '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
+									+ '<div class="event-location">' + e.events[i].location + '</div>'
+								+ '</div>';
+				}
+			
+				// Initialize the popover
+				var popover = $(e.element).popover({ 
+					trigger: 'manual',
+					container: 'body',
+					html:true,
+					content: content,
+					placement: 'bottom'
+				});
+				
+				// Get the popover DOM element
+				var popover =  $(e.element).data('bs.popover').tip();
+				
+				var alreadyVisible = false;
+				
+				// Hide all the old popover visible (only for the case of switching of two adjacent popover).
+				$('div.popover:visible').each(function() {
+					if($(this).get(0) == popover.get(0)) {
+						alreadyVisible = true;
+					}
+					else {
+						// If the popover is not the current one, hide it.
+						$(this).hide();
+					}
+				});
+				
+				if(!alreadyVisible) {
+					$(popover).mouseenter(function () {
+						$(e.element).data('mouse-on-popover', true);
+					})
+					
+					$(popover).mouseleave(function () {
+						$(e.element).data('mouse-on-popover', false);
+						
+						setTimeout(hidePopover, 50, $(e.element));
+					})
+				
+					$(e.element).popover('show');
+				}
+			}
+		},
+		mouseOutDay: function(e) {
+			if(e.events.length > 0) {
+				$(e.element).data('mouse-on-day', false);
+					
+				setTimeout(hidePopover, 50, $(e.element));
+			}
+		},
+		dayContextMenu: function(e) {
+			$(e.element).popover('hide');
+		},
+		dataSource: [
+			{
+				id: 0,
+				name: 'Google I/O',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 0, 10),
+				endDate: new Date(currentYear, 0, 20)
+			},
+			{
+				id: 1,
+				name: 'Microsoft Convergence',
+				location: 'New Orleans, LA',
+				startDate: new Date(currentYear, 0, 15),
+				endDate: new Date(currentYear, 0, 31)
+			},
+			{
+				id: 2,
+				name: 'Microsoft Build Developer Conference',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 3, 29),
+				endDate: new Date(currentYear, 4, 1)
+			},
+			{
+				id: 3,
+				name: 'Apple Special Event',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 8, 1),
+				endDate: new Date(currentYear, 8, 1)
+			},
+			{
+				id: 4,
+				name: 'Apple Keynote',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 8, 9),
+				endDate: new Date(currentYear, 8, 9)
+			},
+			{
+				id: 5,
+				name: 'Chrome Developer Summit',
+				location: 'Mountain View, CA',
+				startDate: new Date(currentYear, 10, 17),
+				endDate: new Date(currentYear, 10, 18)
+			},
+			{
+				id: 6,
+				name: 'F8 2015',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 2, 25),
+				endDate: new Date(currentYear, 2, 26)
+			},
+			{
+				id: 7,
+				name: 'Yahoo Mobile Developer Conference',
+				location: 'New York',
+				startDate: new Date(currentYear, 7, 25),
+				endDate: new Date(currentYear, 7, 26)
+			},
+			{
+				id: 8,
+				name: 'Android Developer Conference',
+				location: 'Santa Clara, CA',
+				startDate: new Date(currentYear, 11, 1),
+				endDate: new Date(currentYear, 11, 4)
+			},
+			{
+				id: 9,
+				name: 'LA Tech Summit',
+				location: 'Los Angeles, CA',
+				startDate: new Date(currentYear, 10, 17),
+				endDate: new Date(currentYear, 10, 17)
+			}
+		]
+	});
+	
 });
 </script>
  

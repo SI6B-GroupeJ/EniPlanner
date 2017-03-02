@@ -49,7 +49,7 @@
 				disabledWeekDays: opt.disabledWeekDays instanceof Array ? opt.disabledWeekDays : [],
 				hiddenWeekDays: opt.hiddenWeekDays instanceof Array ? opt.hiddenWeekDays : [],
 				roundRangeLimits: opt.roundRangeLimits != null ? opt.roundRangeLimits : false,
-				dataSource: opt.dataSource instanceof Array != null ? opt.dataSource : [],
+				dataSource: opt.dataSource instanceof Array ? opt.dataSource : [],
 				style: opt.style == 'background' || opt.style == 'border' || opt.style == 'custom' ? opt.style : 'border',
 				enableContextMenu: opt.enableContextMenu != null ? opt.enableContextMenu : false,
 				contextMenuItems: opt.contextMenuItems instanceof Array ? opt.contextMenuItems : [],
@@ -74,7 +74,7 @@
 			if(opt.mouseOutDay) { this.element.bind('mouseOutDay', opt.mouseOutDay); }
 		},
 		_initializeDatasourceColors: function() {
-			for(var i in this.options.dataSource) {
+			for(var i = 0; i < this.options.dataSource.length; i++) {
 				if(this.options.dataSource[i].color == null) {
 					this.options.dataSource[i].color = colors[i % colors.length];
 				}
@@ -312,14 +312,14 @@
 					var month = $(this).data('month-id');
 					
 					var firstDate = new Date(_this.options.startYear, month, 1);
-					var lastDate = new Date(_this.options.startYear, month + 1, 0);
+					var lastDate = new Date(_this.options.startYear, month + 1, 1);
 					
-					if((_this.options.minDate == null || lastDate >= _this.options.minDate) && (_this.options.maxDate == null || firstDate <= _this.options.maxDate))
+					if((_this.options.minDate == null || lastDate > _this.options.minDate) && (_this.options.maxDate == null || firstDate <= _this.options.maxDate))
 					{
 						var monthData = [];
 					
-						for(var i in _this.options.dataSource) {
-							if(!(_this.options.dataSource[i].startDate > lastDate) || (_this.options.dataSource[i].endDate < firstDate)) {
+						for(var i = 0; i < _this.options.dataSource.length; i++) {
+							if(!(_this.options.dataSource[i].startDate >= lastDate) || (_this.options.dataSource[i].endDate < firstDate)) {
 								monthData.push(_this.options.dataSource[i]);
 							}
 						}
@@ -333,7 +333,7 @@
 								
 								if((_this.options.minDate == null || currentDate >= _this.options.minDate) && (_this.options.maxDate == null || currentDate <= _this.options.maxDate))
 								{
-									for(var i in monthData) {
+									for(var i = 0; i < monthData.length; i++) {
 										if(monthData[i].startDate < nextDate && monthData[i].endDate >= currentDate) {
 											dayData.push(monthData[i]);
 										}
@@ -686,7 +686,7 @@
 			var date = this._getDate(elt);
 			var events = this.getEvents(date);
 			
-			for(var i in events) {
+			for(var i = 0; i < events.length; i++) {
 				var eventItem = $(document.createElement('div'));
 				eventItem.addClass('item');
 				eventItem.css('border-left', '4px solid ' + events[i].color);
@@ -722,7 +722,7 @@
 			var subMenu = $(document.createElement('div'));
 			subMenu.addClass('submenu');
 			
-			for(var i in items) {
+			for(var i = 0; i < items.length; i++) {
 				if(!items[i].visible || items[i].visible(evt)) {
 					var menuItem = $(document.createElement('div'));
 					menuItem.addClass('item');
@@ -789,7 +789,7 @@
 			}
 			
 			if(this.options.disabledWeekDays.length > 0) {
-				for(var d in this.options.disabledWeekDays){
+				for(var d = 0; d < this.options.disabledWeekDays.length; d++){
 					if(date.getDay() == this.options.disabledWeekDays[d]) {
 						return true;
 					}
@@ -797,7 +797,7 @@
 			}
 			
 			if(this.options.disabledDays.length > 0) {
-				for(var d in this.options.disabledDays){
+				for(var d = 0; d < this.options.disabledDays.length; d++){
 					if(date.getTime() == this.options.disabledDays[d].getTime()) {
 						return true;
 					}
@@ -808,7 +808,7 @@
 		},
 		_isHidden: function(day) {
 			if(this.options.hiddenWeekDays.length > 0) {
-				for(var d in this.options.hiddenWeekDays) {
+				for(var d = 0; d < this.options.hiddenWeekDays.length; d++) {
 					if(day == this.options.hiddenWeekDays[d]) {
 						return true;
 					}
@@ -831,7 +831,7 @@
 			var events = [];
 			
 			if(this.options.dataSource && startDate && endDate) {
-				for(var i in this.options.dataSource) {
+				for(var i = 0; i < this.options.dataSource.length; i++) {
 					if(this.options.dataSource[i].startDate < endDate && this.options.dataSource[i].endDate >= startDate) {
 						events.push(this.options.dataSource[i]);
 					}
@@ -1089,14 +1089,14 @@
 	$.fn.mouseOutDay = function(fct) { $(this).bind('mouseOutDay', fct); }
 	
 	var dates = $.fn.calendar.dates = {
-		fr: {
-		days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
-		daysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
-		daysMin: ["D", "L", "Ma", "Me", "J", "V", "S", "D"],
-		months: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
-		monthsShort: ["Jan", "Fév", "Mar", "Avr", "Mai", "Jui", "Jul", "Aou", "Sep", "Oct", "Nov", "Déc"],
-		weekShort:'S',
-		weekStart: 1
+		en: {
+			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			weekShort: 'W',
+			weekStart:0
 		}
 	};
 	

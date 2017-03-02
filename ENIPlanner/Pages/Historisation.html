@@ -12,6 +12,7 @@
     <link href="../css/style.css" rel="stylesheet"/>
     <link href="../css/style-responsive.css" rel="stylesheet" />
     <link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet"/>
+	<link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
   </head>
 
@@ -155,8 +156,21 @@
 <form class="form-inline" role="form">
           <div class="col-xs-6 col-sm-3">
                   <select class="form-control" id="exampleSelect1">
-                        <option>Stéphane OLLIVIER</option>
+					<option></option>
+                    <option>Stéphane OLLIVIER</option>
                           </select>
+                  </div>
+				<div class="col-xs-6 col-sm-3">
+                          <div class="input-group date" id='form_date_debut'>
+							<input class="form-control" type="text">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						  </div>
+                        </div>
+				<div class="col-xs-6 col-sm-3">	
+                          <div class="input-group date" id='form_date_fin'>
+							<input class="form-control" type="text">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						  </div>
                   </div>
          <div class="col-xs-6 col-sm-3">
                 <button type="submit" class="btn btn-success">Rechercher</button> 
@@ -171,20 +185,20 @@
                               <tr>
                                  <th>Date</th>
                                  <th>Acteur</th>
-                                 <th>Detail</th>
+                                 <th>Détail</th>
                               </tr>
                               <tr>
-                                 <td>20/01/2016 : 12:03:56</td>
+                                 <td>20/01/2016 12:03:56</td>
                                  <td>Mr Stéphane OLLIVIER</td>
                                  <td>Création du planning de Paul SAVEAN</td>
                               </tr>
                               <tr>
-                                 <td>22/01/2016 : 22:10:26</td>
+                                 <td>22/01/2016 22:10:26</td>
                                  <td>Mr Stéphane OLLIVIER</td>
                                  <td>Modification du planning de Paul SAVEAN</td>
                               </tr>
                               <tr>
-                                 <td>25/02/2016 : 19:30:16</td>
+                                 <td>25/02/2016 19:30:16</td>
                                  <td>Mr Stéphane OLLIVIER</td>
                                  <td>Création du planning de Matthieu FOLL</td>
                               </tr>                              
@@ -205,7 +219,29 @@
     <script src="../js/jquery.nicescroll.js" type="text/javascript"></script><!--/////////////NE PAS SUPPRIMER IMPORTANT POUR LE MENU/////////////-->
     <script src="../js/jquery.customSelect.min.js" ></script>
     <script src="../js/scripts.js"></script>
-
+	
+	<!-- datetimepicker -->
+	<script src="../js/moment.js"></script>
+	<script src="../js/fr.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		$('#form_date_debut').datetimepicker({
+			format: 'DD MMMM YYYY',
+			widgetPositioning: {
+				horizontal: 'right' 
+			},
+			showTodayButton: true
+		});
+		$('#form_date_fin').datetimepicker({
+			format: 'DD MMMM YYYY',
+			widgetPositioning: {
+				horizontal: 'right' 
+			},
+			showTodayButton: true
+		});
+    });
+    </script>
 
   </body>
 </html>
