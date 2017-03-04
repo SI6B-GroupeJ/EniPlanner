@@ -507,8 +507,11 @@
 	
 	$('#calendar').calendar({ 
 		language: 'fr',
+    minDate: new Date(2015, 8, 1),
+    style: 'background',
 		enableContextMenu: true,
 		enableRangeSelection: true,
+    disabledWeekDays: [0, 6],
 		mouseOnDay: function(e) {
 			if(e.events.length > 0) {
 				$(e.element).data('mouse-on-day', true);
@@ -576,31 +579,36 @@
 				id: 0,
 				name: 'Programmation orientée object',
 				startDate: new Date(currentYear, 8, 15),
-				endDate: new Date(currentYear, 8, 26)
+				endDate: new Date(currentYear, 8, 26),
+        color: '#87CEFA'
 			},
 			{
 				id: 1,
 				name: 'SQL',
 				startDate: new Date(currentYear, 8, 29),
-				endDate: new Date(currentYear, 9, 03)
+				endDate: new Date(currentYear, 9, 03),
+        color: '#87CEFA'
 			},
 			{
 				id: 2,
 				name: 'JEE partie 1',
 				startDate: new Date(currentYear, 9, 06),
-				endDate: new Date(currentYear, 9, 17)
+				endDate: new Date(currentYear, 9, 17),
+        color: '#87CEFA'
 			},
       {
         id: 3,
-        name: 'JEE partie 1',
-        startDate: new Date(currentYear, 9, 06),
-        endDate: new Date(currentYear, 9, 17)
+        name: 'Tests d application',
+        startDate: new Date(currentYear, 9, 20),
+        endDate: new Date(currentYear, 9, 24),
+        color: '#87CEFA'
       },
       {
         id: 4,
-        name: 'Tests d application',
-        startDate: new Date(currentYear, 9, 20),
-        endDate: new Date(currentYear, 9, 24)
+        name: 'JEE partie 2',
+        startDate: new Date(currentYear, 5, 07),
+        endDate: new Date(currentYear, 9, 24),
+        color: '#87CEFA'
       },
 		]
 	});
