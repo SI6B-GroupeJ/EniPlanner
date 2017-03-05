@@ -148,94 +148,69 @@
 <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><i class="fa fa-laptop"></i>Création d'un planning pour un stagiaire</li>                          
+                        <li><i class="fa fa-laptop"></i>Comparaison de Plannings</li>                          
                     </ol>
                 </div>
             </div>
 <div ></br></div>
 
 <!--////////// DEBUT PAGE //////////-->
-<div class="container">
-<div class="stepwizard">
-    <div class="stepwizard-row setup-panel">
-        <div class="stepwizard-step">
-            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-            <p>Step 1</p>
-        </div>
-        <div class="stepwizard-step">
-            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-            <p>Step 2</p>
-        </div>
-        <div class="stepwizard-step">
-            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-            <p>Step 3</p>
-        </div>
-    </div>
-</div>
-<form role="form">
-    <div class="row setup-content" id="step-1">
-        <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Step 1</h3>
-                <div class="form-group">
-                    <label class="control-label">Nom</label>
-                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Prenom</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Entreprise</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
-                </div>
-                 <div class="form-group">
-                    <label class="control-label">Date Début</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
-                </div>
-                 <div class="form-group">
-                    <label class="control-label">Date Fin</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
-                </div>
-                <div class="form-group">
-                        <label class="control-label" for="exampleSelect1">Formation</label>
-                          <select class="form-control" id="exampleSelect1">
-                            <option>DL</option>
-                            <option>TSRI</option>
-                            <option>T2SI</option>
-                            <option>CDI</option>
-                            <option>ASR</option>
-                            <option>MS2I-SI</option>
-                            <option>MS2I-INF</option>
-                          </select>
-                        </div>
-                      </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Suivant</button>
-            </div>
-        </div>
-    </div>
-</form>
-
-
-
-    <!--//////// STEP 2 ////////-->
-    <!--<div class="row setup-content" id="step-2">-->
-        <!--<div class="col-xs-12">-->
-<div class="row setup-content" id="step-2">
 
 <!--//////CALENDAR///////-->
 <section class="panel">
-<div class="col-md-12">
+<div class="col-md-9">
     <div id="calendar"></div>
 </div>
-</section>
+<!--/////////
+FORMULAIRE
+///////////-->
+<div class="col-lg-3">
                       <section class="panel">
+                          <header class="panel-heading">
+                              Liste des alertes
+                          </header>
+                          <!--///// LIBELLE DU MODULE //////-->
+                          <div class="panel-body">
+                              <form class="form-horizontal" role="form">
+                          
+                            <table class="table table-striped table-advance table-hover">
+                           <tbody>
+                              <tr>
+                                 <th>Libelle</th>
+                                 <th>Action</th>
+                              </tr>
+                              <tr>
+                                 <td>Chevauchement du cours JEE</td>
+                                 <td>
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                  </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                 <td>Chevauchement du coursJEE Avancé</td>
+                                 <td>
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                  </div>
+                                  </td>
+                              </tr>                          
+                           </tbody>
+                        </table>
+                      </section>
+                  </section>
+</div>
+</section>
+                  
+                  <section class="panel">
                           <header class="panel-heading">
                               Liste des modules du stagiaire
                           </header>
                           <div ></br></div>
                           <!--///// LIBELLE DU MODULE //////-->
-                    
+                          <div class="col-xs-12">
                           <table class="table table-striped table-advance table-hover">
                            <tbody>
                               <tr>
@@ -274,166 +249,19 @@
                               </tr>                          
                            </tbody>
                         </table>
-                      </section> 
-                      <div class="btn-group">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModalRecherche">Rechercher Module</button>
                       </div>
-                        <div class="btn-group">
-                          <a class="btn btn-primary" href="ModelCalendrier.html">Importer Modèle</a>
-                        </div>
-                        <div class="btn-group">
-                          <button class="btn btn-primary" data-toggle="modal" data-target="#myModalCompare">Comparer</button>
-                        </div>          
-                        <button class="btn btn-primary nextBtn btn-lg pull-right">Suivant</button>
+                      </section> 
+             
+                        <button class="btn btn-primary nextBtn btn-lg pull-right">Annuler</button>
 <div ></br></br></br></div>
 </div>
-<!--//////// FIN STEP 2 //////////-->
 
-    <!--//////// STEP 3 //////////-->
-    <div class="row setup-content" id="step-3">
-      <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Step 3</h3>
-            <div style="text-align: center">
-              <img src="../img/planning.png">
-            </div>
-           <div class="btn-group">
-            <button class="btn btn-primary" type="submit">Télécharger</button>
-          </div>      
-            <button class="btn btn-success btn-lg pull-right" type="submit">Envoyer</button>
-    </div>
- </div>
-  </div>
 
 </div>
 
 
 <!--/////////// FIN PAGE //////////-->
  
-<!--//////// DEBUT MODAL RECHERCHE //////////-->
-<div id="myModalRecherche" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rechercher un module</h4>
-        </div>
-      <div class="modal-body">
-                      <section class="panel">
-                          <header class="panel-heading">
-                              Recherche de module
-                          </header>
-                          <!--///// LIBELLE DU MODULE //////-->
-                          <div class="panel-body">
-                              <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                      <label for="inputLibelle" class="col-md-3 control-label">Libelle</label>
-                                      <div class="col-md-9">
-                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="Libelle">
-                                          <div ></br></div>
-                                      </div>
-                                  </div>
-                            <table class="table table-striped table-advance table-hover">
-                           <tbody>
-                              <tr>
-                                 <th>Libelle</th>
-                                 <th>Duree Heures</th>
-                                 <th>Duree Semaines</th>
-                                 <th>Action</th>
-                              </tr>
-                              <tr>
-                                 <td>JEE</td>
-                                 <td>60</td>
-                                 <td>3</td>
-                                 <td>
-                                  <div class="btn-group">
-                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                                  </div>
-                                  </td>
-                              </tr>
-                              <tr>
-                                 <td>JEE Avancé</td>
-                                 <td>70</td>
-                                 <td>3</td>
-                                 <td>
-                                  <div class="btn-group">
-                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                                  </div>
-                                  </td>
-                              </tr>                          
-                           </tbody>
-                        </table>
-                      </section>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-<!--//////// FIN MODAL //////////-->
-
-
-
-<!--//////// DEBUT MODAL COMPARE //////////-->
-<div id="myModalCompare" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rechercher un module</h4>
-        </div>
-      <div class="modal-body">
-                      <section class="panel">
-                          <header class="panel-heading">
-                              Recherche de module
-                          </header>
-                          <!--///// LIBELLE DU MODULE //////-->
-                          <div class="panel-body">
-                              <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                      <label for="inputLibelle" class="col-md-3 control-label">Prenom</label>
-                                      <div class="col-md-9">
-                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="Libelle">
-                                          <div ></br></div>
-                                      </div>
-                                  </div>
-                                  <!--///// Duree en heure //////-->
-                                  <div class="form-group">
-                                      <label for="inputPassword1" class="col-md-3 control-label">Nom</label>
-                                      <div class="col-md-9">
-                                          <input type="dureeH" class="form-control" id="inputDureeH" placeholder="Duree En Heures">
-                                          <div ></br></br></div>
-                                      </div>
-                                  </div>
-                                   <table class="table table-striped table-advance table-hover">
-                           <tbody>
-                              <tr>
-                                 <th>Nom</th>
-                                 <th>Prenom</th>
-                                 <th>Action</th>
-                              </tr>
-                              <tr>
-                                 <td>Matthieu</td>
-                                 <td>FOLL</td>
-                                 <td>
-                                  <div class="btn-group">
-                                      <a class="btn btn-primary" href="#">Ouvrir</a>
-                                  </div>
-                                  </td>
-                              </tr>                          
-                           </tbody>
-                        </table>
-                      </section>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-    </div>
-  </div>
-  </div>
-</div>
-<!--//////// FIN MODAL COMPARE//////////-->
 
 
 
@@ -452,66 +280,13 @@
 
 
 <script type="text/javascript">
-  $(document).ready(function () {
-
-    var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
-            allNextBtn = $('.nextBtn');
-
-    allWells.hide();
-
-    navListItems.click(function (e) {
-        e.preventDefault();
-        var $target = $($(this).attr('href')),
-                $item = $(this);
-
-        if (!$item.hasClass('disabled')) {
-            navListItems.removeClass('btn-primary').addClass('btn-default');
-            $item.addClass('btn-primary');
-            allWells.hide();
-            $target.show();
-            $target.find('input:eq(0)').focus();
-        }
-    });
-
-    allNextBtn.click(function(){
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']"),
-            isValid = true;
-
-        $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
-            }
-        }
-
-        if (isValid)
-            nextStepWizard.removeAttr('disabled').trigger('click');
-    });
-
-    $('div.setup-panel div a.btn-primary').trigger('click');
-	
-	
-	function hidePopover(elt) {
-	// Hiding the popover only if the mouse is not on the day AND not on the popover.
-	if(!elt.data('mouse-on-day') && !elt.data('mouse-on-popover')) {
-		elt.popover('hide');
-	}
-	}
 	
 	var currentYear = new Date().getFullYear();
 	
 	$('#calendar').calendar({ 
 		language: 'fr',
-    startYear: 2015,
-    style: 'background',
 		enableContextMenu: true,
 		enableRangeSelection: true,
-    disabledWeekDays: [0, 6],
 		mouseOnDay: function(e) {
 			if(e.events.length > 0) {
 				$(e.element).data('mouse-on-day', true);
@@ -521,6 +296,7 @@
 				for(var i in e.events) {
 					content += '<div class="event-tooltip-content">'
 									+ '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
+									+ '<div class="event-location">' + e.events[i].location + '</div>'
 								+ '</div>';
 				}
 			
@@ -577,43 +353,77 @@
 		dataSource: [
 			{
 				id: 0,
-				name: 'Programmation orientée object',
-				startDate: new Date(2015, 8, 15),
-				endDate: new Date(2015, 8, 26),
-        color: '#87CEFA'
+				name: 'Google I/O',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 0, 10),
+				endDate: new Date(currentYear, 0, 20)
 			},
 			{
 				id: 1,
-				name: 'SQL',
-				startDate: new Date(currentYear, 8, 29),
-				endDate: new Date(currentYear, 9, 03),
-        color: '#87CEFA'
+				name: 'Microsoft Convergence',
+				location: 'New Orleans, LA',
+				startDate: new Date(currentYear, 0, 15),
+				endDate: new Date(currentYear, 0, 31)
 			},
 			{
 				id: 2,
-				name: 'JEE partie 1',
-				startDate: new Date(currentYear, 9, 06),
-				endDate: new Date(currentYear, 9, 17),
-        color: '#87CEFA'
+				name: 'Microsoft Build Developer Conference',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 3, 29),
+				endDate: new Date(currentYear, 4, 1)
 			},
-      {
-        id: 3,
-        name: 'Tests d application',
-        startDate: new Date(currentYear, 9, 20),
-        endDate: new Date(currentYear, 9, 24),
-        color: '#87CEFA'
-      },
-      {
-        id: 4,
-        name: 'JEE partie 2',
-        startDate: new Date(currentYear, 5, 07),
-        endDate: new Date(currentYear, 9, 24),
-        color: '#87CEFA'
-      },
+			{
+				id: 3,
+				name: 'Apple Special Event',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 8, 1),
+				endDate: new Date(currentYear, 8, 1)
+			},
+			{
+				id: 4,
+				name: 'Apple Keynote',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 8, 9),
+				endDate: new Date(currentYear, 8, 9)
+			},
+			{
+				id: 5,
+				name: 'Chrome Developer Summit',
+				location: 'Mountain View, CA',
+				startDate: new Date(currentYear, 10, 17),
+				endDate: new Date(currentYear, 10, 18)
+			},
+			{
+				id: 6,
+				name: 'F8 2015',
+				location: 'San Francisco, CA',
+				startDate: new Date(currentYear, 2, 25),
+				endDate: new Date(currentYear, 2, 26)
+			},
+			{
+				id: 7,
+				name: 'Yahoo Mobile Developer Conference',
+				location: 'New York',
+				startDate: new Date(currentYear, 7, 25),
+				endDate: new Date(currentYear, 7, 26)
+			},
+			{
+				id: 8,
+				name: 'Android Developer Conference',
+				location: 'Santa Clara, CA',
+				startDate: new Date(currentYear, 11, 1),
+				endDate: new Date(currentYear, 11, 4)
+			},
+			{
+				id: 9,
+				name: 'LA Tech Summit',
+				location: 'Los Angeles, CA',
+				startDate: new Date(currentYear, 10, 17),
+				endDate: new Date(currentYear, 10, 17)
+			}
 		]
 	});
 	
-});
 </script>
  
 
