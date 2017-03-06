@@ -222,9 +222,9 @@ FORMULAIRE
                                  <th>Action</th>
                               </tr>
                               <tr>
-                                 <td>JEE</td>
-                                 <td>20/01/2016</td>
-                                 <td>01/02/2016</td>
+                                 <td>Programmation orientée objet</td>
+                                 <td>15/09/2014</td>
+                                 <td>26/09/2014</td>
                                  <td>70</td>
                                  <td>2</td>
                                  <td>
@@ -235,9 +235,22 @@ FORMULAIRE
                                   </td>
                               </tr>
                               <tr>
-                                 <td>JEE Avancé</td>
-                                 <td>04/02/2016</td>
-                                 <td>20/02/2016</td>
+                                 <td>SQL</td>
+                                 <td>29/09/2014</td>
+                                 <td>03/10/2014</td>
+                                 <td>35</td>
+                                 <td>1</td>
+                                 <td>
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                  </div>
+                                  </td>
+                              </tr>
+                               <tr>
+                                 <td>Développement avec Java JEE partie 1</td>
+                                 <td>06/10/2014</td>
+                                 <td>17/10/2014</td>
                                  <td>70</td>
                                  <td>2</td>
                                  <td>
@@ -246,7 +259,46 @@ FORMULAIRE
                                       <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                                   </div>
                                   </td>
-                              </tr>                          
+                              </tr>
+                               <tr>
+                                 <td>Tests d'application</td>
+                                 <td>20/10/2014</td>
+                                 <td>24/10/2014</td>
+                                 <td>35</td>
+                                 <td>1</td>
+                                 <td>
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                  </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                 <td>Développement avec JEE partie 2</td>
+                                 <td>07/04/2015</td>
+                                 <td>17/04/2015</td>
+                                 <td>63</td>
+                                 <td>1,2</td>
+                                 <td>
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                  </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                 <td>JEE avancé</td>
+                                 <td>04/05/2015</td>
+                                 <td>15/05/2015</td>
+                                 <td>35</td>
+                                 <td>1</td>
+                                 <td>
+                                  <div class="btn-group">
+                                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                  </div>
+                                  </td>
+                              </tr>                 
                            </tbody>
                         </table>
                       </div>
@@ -255,17 +307,9 @@ FORMULAIRE
                         <button class="btn btn-primary nextBtn btn-lg pull-right">Annuler</button>
 <div ></br></br></br></div>
 </div>
-
-
 </div>
-
-
 <!--/////////// FIN PAGE //////////-->
  
-
-
-
-
 
   <!--/////////////  JS /////////////-->
     <script src="../js/jquery.js"></script>
@@ -285,8 +329,11 @@ FORMULAIRE
 	
 	$('#calendar').calendar({ 
 		language: 'fr',
+    startYear: 2014,
 		enableContextMenu: true,
 		enableRangeSelection: true,
+    disabledWeekDays: [0, 6],
+
 		mouseOnDay: function(e) {
 			if(e.events.length > 0) {
 				$(e.element).data('mouse-on-day', true);
@@ -296,7 +343,7 @@ FORMULAIRE
 				for(var i in e.events) {
 					content += '<div class="event-tooltip-content">'
 									+ '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
-									+ '<div class="event-location">' + e.events[i].location + '</div>'
+                  + '-----------------------------------------------'
 								+ '</div>';
 				}
 			
@@ -351,77 +398,98 @@ FORMULAIRE
 			$(e.element).popover('hide');
 		},
 		dataSource: [
-			{
-				id: 0,
-				name: 'Google I/O',
-				location: 'San Francisco, CA',
-				startDate: new Date(currentYear, 0, 10),
-				endDate: new Date(currentYear, 0, 20)
-			},
-			{
-				id: 1,
-				name: 'Microsoft Convergence',
-				location: 'New Orleans, LA',
-				startDate: new Date(currentYear, 0, 15),
-				endDate: new Date(currentYear, 0, 31)
-			},
-			{
-				id: 2,
-				name: 'Microsoft Build Developer Conference',
-				location: 'San Francisco, CA',
-				startDate: new Date(currentYear, 3, 29),
-				endDate: new Date(currentYear, 4, 1)
-			},
-			{
-				id: 3,
-				name: 'Apple Special Event',
-				location: 'San Francisco, CA',
-				startDate: new Date(currentYear, 8, 1),
-				endDate: new Date(currentYear, 8, 1)
-			},
-			{
-				id: 4,
-				name: 'Apple Keynote',
-				location: 'San Francisco, CA',
-				startDate: new Date(currentYear, 8, 9),
-				endDate: new Date(currentYear, 8, 9)
-			},
-			{
-				id: 5,
-				name: 'Chrome Developer Summit',
-				location: 'Mountain View, CA',
-				startDate: new Date(currentYear, 10, 17),
-				endDate: new Date(currentYear, 10, 18)
-			},
-			{
-				id: 6,
-				name: 'F8 2015',
-				location: 'San Francisco, CA',
-				startDate: new Date(currentYear, 2, 25),
-				endDate: new Date(currentYear, 2, 26)
-			},
-			{
-				id: 7,
-				name: 'Yahoo Mobile Developer Conference',
-				location: 'New York',
-				startDate: new Date(currentYear, 7, 25),
-				endDate: new Date(currentYear, 7, 26)
-			},
-			{
-				id: 8,
-				name: 'Android Developer Conference',
-				location: 'Santa Clara, CA',
-				startDate: new Date(currentYear, 11, 1),
-				endDate: new Date(currentYear, 11, 4)
-			},
-			{
-				id: 9,
-				name: 'LA Tech Summit',
-				location: 'Los Angeles, CA',
-				startDate: new Date(currentYear, 10, 17),
-				endDate: new Date(currentYear, 10, 17)
-			}
-		]
+      {
+        id: 0,
+        name: 'Programmation orientée object',
+        startDate: new Date(2014, 8, 15),
+        endDate: new Date(2014, 8, 26),
+        color: '#87CEFA'
+      },
+      {
+        id: 1,
+        name: 'SQL',
+        startDate: new Date(2014, 8, 29),
+        endDate: new Date(2014, 9, 03),
+        color: '#87CEFA'
+      },
+      {
+        id: 2,
+        name: 'JEE partie 1',
+        startDate: new Date(2014, 9, 06),
+        endDate: new Date(2014, 9, 17),
+        color: '#87CEFA'
+      },
+      {
+        id: 3,
+        name: 'Tests d application',
+        startDate: new Date(2014, 9, 20),
+        endDate: new Date(2014, 9, 24),
+        color: '#87CEFA'
+      },
+      {
+        id: 4,
+        name: 'JEE partie 2',
+        startDate: new Date(2015, 5, 07),
+        endDate: new Date(2015, 5, 17),
+        color: '#87CEFA'
+      },
+      {
+        id: 5,
+        name: 'JEE avancé',
+        startDate: new Date(2015, 6, 04),
+        endDate: new Date(2015, 5, 17),
+        color: '#87CEFA'
+      },
+      {
+        id: 6,
+        name: 'Analyse etconception d une application',
+        startDate: new Date(2015, 7, 22),
+        endDate: new Date(2015, 8, 10),
+        color: '#87CEFA'
+      },
+      {
+        id: 7,
+        name: 'Projet réalisation application intranet',
+        startDate: new Date(2015, 9, 24),
+        endDate: new Date(2015, 10, 04),
+        color: '#87CEFA'
+      },
+      {
+        id: 8,
+        name: 'Architecture applicatives',
+        startDate: new Date(2015, 10, 21),
+        endDate: new Date(2015, 10, 25),
+        color: '#87CEFA'
+      },
+      {
+        id: 9,
+        name: 'Procédure stockées avec PL-SQL',
+        startDate: new Date(2015, 11, 26),
+        endDate: new Date(2015, 11, 30),
+        color: '#87CEFA'
+      },
+      {
+        id: 10,
+        name: 'Rappels sur la programmation objet',
+        startDate: new Date(2014, 09, 06),
+        endDate: new Date(2014, 09, 10),
+        color: 'red'
+      },
+      {
+        id: 11,
+        name: 'Le language de requête SQL',
+        startDate: new Date(2014, 09, 13),
+        endDate: new Date(2014, 09, 17),
+        color: 'red'
+      },
+      {
+        id: 12,
+        name: 'Procédures stockées avec PL-SQL',
+        startDate: new Date(2014, 10, 17),
+        endDate: new Date(2014, 10, 21),
+        color: 'red'
+      },
+    ]
 	});
 	
 </script>
