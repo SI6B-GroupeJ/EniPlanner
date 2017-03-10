@@ -147,6 +147,7 @@
                         <li><i class="fa fa-laptop"></i>Consultation d'un stagiaire</li>                          
                     </ol>
                 </div>
+
 				<div class="col-xs-6">
                 <div class="x_panel">
                   <div class="x_content">
@@ -222,9 +223,9 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          <button type="submit" class="btn btn-success">Modifier Planning</button>
-						              <button type="submit" class="btn btn-success">Dupliquer le Planning</button>
-                          <button type="submit" class="btn btn-success">Télécharger Planning</button>    
+                          <button type="submit" class="btn btn-primary">Modifier Planning</button>
+						              <button type="submit" class="btn btn-primary">Dupliquer le Planning</button>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#myModalTelecharger">Télécharger planning</a>   
                         </div>
                       </div>
                     </form>
@@ -238,6 +239,54 @@
         </div>
           </section>
   </section>
+
+
+<!--//////// DEBUT MODAL RECHERCHE //////////-->
+<div id="myModalTelecharger" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Télécharger le planning</h4>
+        </div>
+      <div class="modal-body">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              Télécharger le planning
+                          </header>
+                          <!--///// LIBELLE DU MODULE //////-->
+                          <div class="panel-body">
+                              <form class="form-horizontal" role="form">
+                                  <div class="form-group" style="text-align: center">
+                                      <label class="radio-inline"><input type="radio" name="optradio">PDF</label>
+                                      <label class="radio-inline"><input type="radio" name="optradio">RTF</label>
+                                      <label class="radio-inline"><input type="radio" name="optradio">Les deux</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8">
+                                          <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                         <div class="btn-group">
+                                            <a class="btn btn-primary" href="#">Parcourir</a>
+                                          </div> 
+                                    </div>
+                
+                                  </form>
+                              </div>
+
+                      </section>
+            </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Télécharger</button>
+      </div>
+    
+  </div>
+  </div>
+</div>
+<!--//////// FIN MODAL //////////-->
+
+
 
 <!--/////////////  JS /////////////-->
     <script src="../js/jquery.js"></script>
