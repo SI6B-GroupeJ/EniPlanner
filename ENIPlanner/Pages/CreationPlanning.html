@@ -441,14 +441,19 @@
                                   <div class="form-group">
                                       <label for="inputPassword1" class="col-md-3 control-label">Date Début</label>
                                       <div class="col-md-9">
-                                          <input type="dureeH" class="form-control" id="inputDureeH" placeholder="">
-                                        
+										<div class="input-group date" id='form_date_debut_recherche'>
+											<input class="form-control" type="text">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+										</div>
                                       </div>
                                   </div>
                                   <div class="form-group">
                                       <label for="inputPassword1" class="col-md-3 control-label">Date Fin</label>
                                       <div class="col-md-9">
-                                          <input type="dureeH" class="form-control" id="inputDureeH" placeholder="">
+                                          <div class="input-group date" id='form_date_fin_recherche'>
+											<input class="form-control" type="text">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+										</div>
                                           
                                       </div>
                                   </div>
@@ -580,14 +585,20 @@
                                   <div class="form-group">
                                       <label for="inputLibelle" class="col-md-3 control-label">Date début</label>
                                       <div class="col-md-9">
-                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="">
+                                          <div class="input-group date" id='form_date_debut_modif'>
+											<input class="form-control" type="text">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+										</div>
                                           <div ></br></div>
                                       </div>
                                   </div>
                                   <div class="form-group">
                                       <label for="inputLibelle" class="col-md-3 control-label">Date Fin</label>
                                       <div class="col-md-9">
-                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="">
+                                          <div class="input-group date" id='form_date_fin_modif'>
+											<input class="form-control" type="text">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+										</div>
                                           <div ></br></div>
                                       </div>
                                   </div>
@@ -869,6 +880,36 @@
       showTodayButton: true
     });
     $('#form_date_fin').datetimepicker({
+      format: 'DD MMMM YYYY',
+      widgetPositioning: {
+        horizontal: 'right' 
+      },
+      showTodayButton: true
+    });
+	
+	$('#form_date_debut_recherche').datetimepicker({
+      format: 'DD MMMM YYYY',
+      widgetPositioning: {
+        horizontal: 'right' 
+      },
+      showTodayButton: true
+    });
+    $('#form_date_fin_recherche').datetimepicker({
+      format: 'DD MMMM YYYY',
+      widgetPositioning: {
+        horizontal: 'right' 
+      },
+      showTodayButton: true
+    });
+	
+	$('#form_date_debut_modif').datetimepicker({
+      format: 'DD MMMM YYYY',
+      widgetPositioning: {
+        horizontal: 'right' 
+      },
+      showTodayButton: true
+    });
+    $('#form_date_fin_modif').datetimepicker({
       format: 'DD MMMM YYYY',
       widgetPositioning: {
         horizontal: 'right' 
