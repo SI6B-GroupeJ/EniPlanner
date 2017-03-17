@@ -178,6 +178,11 @@
                                           Modifier Mot de passe
                                       </a>
                                   </li>
+                                  <li class="">
+                                      <a data-toggle="tab" href="#gestionRole">
+                                          Gestion des rôles
+                                      </a>
+                                  </li>
                               </ul>
                           </header>
                           <div class="panel-body">
@@ -274,9 +279,78 @@
                                       </div>
                                     </section>
                                   </div>
+                                  <!--/////// FIN Modif MDP /////////-->
 
-<!--/////// FIN Modif MDP /////////-->
+                                  <!--/////// Debut Gestion role /////////-->
+                                  <div id="gestionRole" class="tab-pane">
+                                    <section class="panel">
+                                      <div class="panel-body bio-graph-info">
+                                          <h1>Gestion des rôles</h1>
+                                          <div class="row">
+                                            <div class="panel panel-default col-xs-4">
+                                            <div class="panel-heading">Administrateur</div>
+                                            <div class="panel-body">
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Création</label>
+                                                </div>
+                                                <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="">Modification</label>
+                                                </div>
+                                                <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="">Suppression</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Consultation</label>
+                                                </div>
 
+                                                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                            </div>
+                                          </div>
+                                          <div class="panel panel-default col-xs-4">
+                                            <div class="panel-heading">Service relation ENI</div>
+                                            <div class="panel-body">
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Création</label>
+                                                </div>
+                                                <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="">Modification</label>
+                                                </div>
+                                                 <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="">Suppression</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Consultation</label>
+                                                </div>
+                                               <button type="button" class="btn btn-danger">Supprimer Compte</button>
+                                                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                            </div>
+                                          </div>
+                                          <div class="panel panel-default col-xs-4">
+                                            <div class="panel-heading">Service Administratif</div>
+                                            <div class="panel-body">
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Création</label>
+                                                </div>
+                                                <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="">Modification</label>
+                                                </div>
+                                                <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="">Suppression</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Consultation</label>
+                                                </div>
+                                                <button type="button" class="btn btn-danger">Supprimer Compte</button>
+                                                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                      </div>
+                                    </section>
+                                      <button class="btn btn-primary" data-toggle="modal" data-target="#myModalCreationCompte">Création compte</button>
+                                  </div>
+                                  <!--/////// Debut Gestion role /////////-->
 
                               </div>
                           </div>
@@ -287,6 +361,54 @@
       </section>
 
   </section>
+
+
+  <!--//////// DEBUT MODAL MODIF DATE //////////-->
+<div id="myModalCreationCompte" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Création compte utilisateur</h4>
+        </div>
+      <div class="modal-body">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              Création compte utilisateu
+                          </header>
+                         
+                          <div class="panel-body">
+                            <div class="form-group">
+                                      <label for="inputLibelle" class="col-md-3 control-label">Nom</label>
+                                      <div class="col-md-9">
+                                          <input type="libelle" class="form-control" id="inputLibelle" placeholder="Nom du compte">
+                                      </div>
+                                    </br></br>
+                               </div>
+                            <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Création</label>
+                                                </div>
+                                                <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="" >Modification</label>
+                                                </div>
+                                                 <div class="checkbox disabled">
+                                                  <label><input type="checkbox" value="" >Suppression</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="">Consultation</label>
+                                                </div>
+                          </div> 
+                      </section>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger">Annuler</button>
+        <button type="submit" class="btn btn-primary">Valider</button>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+<!--//////// FIN MODAL MODIF DATE//////////-->
     <!-- javascripts -->
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
